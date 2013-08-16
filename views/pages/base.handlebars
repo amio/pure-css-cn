@@ -1,57 +1,57 @@
-{{setTitle     "Base"}}
-{{setSubTitle  "Leveraging Normalize.css, an HTML5-ready alternative to CSS resets"}}
+{{setTitle     "基础样式"}}
+{{setSubTitle  "演绎 Normalize.css，面向 HTML5 的 CSS 样式重置"}}
 {{setActiveNav "base"}}
 
 {{> header}}
 
 <div class="content">
-    <h2 class="content-subhead">The Foundation</h2>
+    <h2 class="content-subhead">基础</h2>
     <p>
-        All modules in Pure build on top of <a href="http://necolas.github.com/normalize.css/">Normalize.css</a>. It's our foundational layer to maintain some degree of cross-browser consistency. We use Normalize v1.x because it supports older versions of Internet Explorer. We like Normalize so much that we put it on our CDN. You can pull in Normalize.css by adding this {{code "<link>"}} element on your page:
+        <a href="http://necolas.github.com/normalize.css/">Normalize.css</a> 是维持跨浏览器一致性的基础层，所有 Pure 模组都基于此构建。我们使用 1.x 版本的 Normalize，这样可以支持所有版本的IE浏览器。我们超爱 Normalize 所以把它放上了我们的 CDN，你可以这样引用它：
     </p>
 
     {{#code}}
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/{{pure_version}}/base-min.css">
     {{/code}}
 
-    <h3>A bit about Normalize.css</h3>
+    <h3>Normalize.css 简介</h3>
     <p>
-        <a href="http://necolas.github.com/normalize.css/">Normalize.css</a> is an open-source project by <a href="http://twitter.com/necolas">Nicolas Gallagher</a> and <a href="http://twitter.com/jon_neal">Jonathan Neal</a>. <a href="http://nicolasgallagher.com/about-normalize-css/">In their own words</a>:
+        <a href="http://necolas.github.com/normalize.css/">Normalize.css</a> 是 <a href="http://twitter.com/necolas">Nicolas Gallagher</a> 和 <a href="http://twitter.com/jon_neal">Jonathan Neal</a> 领导的开源项目，<a href="http://nicolasgallagher.com/about-normalize-css/">用他们的话说</a>：
     </p>
 
     <blockquote class="content-quote">
-        Normalize.css is a small CSS file that provides better cross-browser consistency in the default styling of HTML elements. It’s a modern, HTML5-ready, alternative to the traditional CSS reset."
+        『Normalize.css 是一个精巧的CSS文件，在跨浏览器环境中维持一致的默认HTML元素样式，采用最新技术，面向HTML5。』
     </blockquote>
 
     <p>
-        Normalize.css comes with <a href="https://github.com/necolas/normalize.css/wiki">great documentation</a> and a <a href="http://nicolasgallagher.com/about-normalize-css/">thorough guide</a> explaining how it differs from a traditional reset. You can also check out YUI's <a href="http://yuilibrary.com/yui/docs/cssnormalize/">CSSNormalize</a> module, which includes the generic Normalize along with a <a href="http://yuilibrary.com/yui/docs/cssnormalize/#context">contextual version</a>. The contextual version of Normalize only applies normalized styles to elements that are children of an element with the class name {{code "yui3-normalized"}}.
+        Normalize.css 有一份 <a href="https://github.com/necolas/normalize.css/wiki">很赞的文档</a> 以及 <a href="http://nicolasgallagher.com/about-normalize-css/">完整的入门指引</a> 解释了它和传统 CSS 样式重置的不同之处。另外也可以看看 YUI 的 <a href="http://yuilibrary.com/yui/docs/cssnormalize/">CSSNormalize</a> 模块，它包含了普通CSS重置以及一个 <a href="http://yuilibrary.com/yui/docs/cssnormalize/#context">局部版</a>，局部版本只对包含 {{code "yui3-normalized"}} 类的元素和它的子元素进行CSS重置。
     </p>
 
-    <h2 class="content-subhead">Typography</h2>
+    <h2 class="content-subhead">文字排版</h2>
     <p>
-        To keep Pure lean and extensible, we do not add any typographic styles over the foundational layer provided by Normalize. This means that you get headings with different sizes, blockquotes, lists, definition lists, and more, but their styles are minimal and easy to override.
+        为了保持 Pure 的简单和易扩展性，除了 Normalize 包含的内容，我们没有添加任何排版相关样式，所以这里有各种大小的标题（h1-h6），引用（blockquotes），列表（ul，ol），定义列表（dl）等，样式精简，修改方便。
     </p>
 
 
-    <h2 class="content-subhead">Headings</h2>
+    <h2 class="content-subhead">标题</h2>
     <p>
-        Headings run from 1 to 6 in decreasing size. Font sizes are defined in {{code "em"}}.
+        标题字体大小从 h1 到 h6 递减，以 {{code "em"}} 为单位。
     </p>
 
     {{> base/headings}}
 
 
-    <h2 class="content-subhead">Lists</h2>
+    <h2 class="content-subhead">列表</h2>
     <p>
-        Lists come in different forms. There are unordered lists, ordered lists, and definition lists. Normalize provides basic styling and cross-browser consistency for these lists. You can style these further in your specific application. If you're looking to use lists to make menus, check out <a href="{{pages.menus}}">Menu CSS</a>.
+        列表有多种形式，有序列表、无序列表和定义列表。Normalize 为这几个列表提供了跨浏览器一致的基础样式，你可以按自己的需求进一步定制。如果你要用列表来创建菜单，请至 <a href="{{pages.menus}}">菜单 CSS</a>.
     </p>
 
     {{> base/lists}}
 
 
-    <h2 class="content-subhead">Blockquotes</h2>
+    <h2 class="content-subhead">块级引用</h2>
     <p>
-        Blockquotes encompass text that is meant to represent a quotation. By default, blockquotes look like regular text, except that they are indented. This gives you the freedom to set your own styles on top. Here's a default one:
+        默认的 &lt;blockquote&gt; 样式跟普通文字差不多，只加了一点缩进——我们知道你会有自己的引用样式的。这是默认效果：
     </p>
 
     {{> base/blockquote}}
@@ -61,17 +61,17 @@
   {{/code}}
 
     <p>
-        Taking advantage of the lack of default styles, we've customized the blockquotes on this site to look a little different. We encourage you to do the same based on how your site looks.
+        得益于默认样式的精简，我们稍加修改使其更漂亮一点，用在你正在看的这个文档网站上。当然，我们建议你也这么做：
     </p>
 
     <blockquote class="content-quote">
-        One small step for man, one giant leap for mankind.
+        One small step for man, one giant leap for mankind. 我的一小步，人类一大步。
     </blockquote>
 
 
-    <h2 class="content-subhead">Abbreviations</h2>
+    <h2 class="content-subhead">缩略词</h2>
     <p>
-        The {{code "<abbr>"}} represents an abbreviation. If a {{code "title"}} attribute is provided, it'll show up on hover. Abbreviations generally have a small dotted underline.
+        {{code "<abbr>"}} 元素表示一个缩略词，它的 {{code "title"}} 属性会在鼠标指向的时候显示。缩略词通常是虚下划线的样式。
     </p>
 
     {{> base/abbr}}
@@ -81,9 +81,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Addresses</h2>
+    <h2 class="content-subhead">地址</h2>
     <p>
-        The {{code "<address>"}} is used to reference contact information. By default, addresses have no specific styling. However, they can be styled using the various inline styles available through Normalize.
+        {{code "<address>"}} 元素通常用于显示联系人信息，默认没有特别样式，不过他们可以用 Normalize 提供的各种内联样式加以修饰。
     </p>
 
     {{> base/address}}
@@ -93,20 +93,20 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Inline Styles</h2>
+    <h2 class="content-subhead">内联样式</h2>
     <p>
-        There are numerous other inline styles that can be used. Here's a quick list from the <a href="http://github.com/necolas/normalize.css">Normalize documentation</a>:
+        <a href="http://github.com/necolas/normalize.css">Normalize 文档</a> 里有一份可用的内联样式清单：
     </p>
 
     {{> base/inline}}
 
 
-    <h2 class="content-subhead">Moving beyond Normalize</h2>
+    <h2 class="content-subhead">超越 Normalize</h2>
     <p>
-        Normalize.css is a great starting place for your project, but some HTML elements such as forms, tables, and menus require more styling than what's provided by Normalize.
+        Normalize.css 是一个非常好的项目启动基础，但是还有很多HTML元素（表单、表格、菜单等）都需要在 Normalize 的基础上进一步美化。
     </p>
 
     <p>
-        We made a more opinionated look and feel for these elements, while keeping them minimal enough so that you can customize them for your site or app's needs. Check out our CSS for <a href="{{pages.forms}}">Forms</a>, <a href="{{pages.tables}}">Tables</a>, and <a href="{{pages.menus}}">Menus</a>.
+        我们为这些元素创建了一些更漂亮的样式，同时又尽力保持精简，以便你能够轻易定制为自己的应用所需风格。现在来看看这些吧：<a href="{{pages.forms}}">表单</a>，<a href="{{pages.tables}}">表格</a>，和<a href="{{pages.menus}}">菜单</a>.
     </p>
 </div>
