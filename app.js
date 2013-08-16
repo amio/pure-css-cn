@@ -102,15 +102,15 @@ function routePage(id, path, label, callbacks) {
 }
 
 routePage('home',      '/',                        routes.render('home'));
-routePage('base',      '/base/',      'Base',      routes.render('base'));
-routePage('grids',     '/grids/',     'Grids',     routes.render('grids'));
-routePage('forms',     '/forms/',     'Forms',     routes.render('forms'));
-routePage('buttons',   '/buttons/',   'Buttons',   routes.render('buttons'));
-routePage('tables',    '/tables/',    'Tables',    routes.render('tables'));
-routePage('menus',     '/menus/',     'Menus',     routes.render('menus'));
-routePage('customize', '/customize/', 'Customize', routes.render('customize'));
-routePage('extend',    '/extend/',    'Extend',    routes.render('extend'));
-routePage('layouts',   '/layouts/',   'Layouts',   routes.render('layouts'));
+routePage('base',      '/base/',      '基础样式',      routes.render('base'));
+routePage('grids',     '/grids/',     '栅格',     routes.render('grids'));
+routePage('forms',     '/forms/',     '表单',     routes.render('forms'));
+routePage('buttons',   '/buttons/',   '按钮',   routes.render('buttons'));
+routePage('tables',    '/tables/',    '表格',    routes.render('tables'));
+routePage('menus',     '/menus/',     '菜单',     routes.render('menus'));
+routePage('customize', '/customize/', '模块选择', routes.render('customize'));
+routePage('extend',    '/extend/',    '扩展 Pure',    routes.render('extend'));
+routePage('layouts',   '/layouts/',   '布局示例',   routes.render('layouts'));
 
 routePage('layoutsGallery',   '/layouts/gallery/',   routes.render('layouts/gallery', 'blank'));
 routePage('layoutsMarketing', '/layouts/marketing/', routes.render('layouts/marketing', 'blank'));
