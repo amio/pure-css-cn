@@ -1,4 +1,4 @@
-{{setTitle     "Buttons"}}
+{{setTitle     "按钮"}}
 {{setSubTitle  "Simple CSS for Buttons"}}
 {{setActiveNav "buttons"}}
 
@@ -9,9 +9,9 @@
 
 <div class="content">
 
-    <h2 class="content-subhead">Default Buttons</h2>
+    <h2 class="content-subhead">基础按钮</h2>
     <p>
-        To create a Pure Button, add the {{code "pure-button"}} classname to any {{code "<a>"}} or {{code "<button>"}} element.
+        给 {{code "<a>"}} 或 {{code "<button>"}} 元素添加类名 {{code "pure-button"}} 即可创建 Pure 按钮。
     </p>
 
   {{#prefixIds "default"}}
@@ -23,9 +23,9 @@
     {{> buttons/default}}
   {{/code}}
 
-    <h2 class="content-subhead">Disabled Buttons</h2>
+    <h2 class="content-subhead">禁用按钮</h2>
     <p>
-        To mark a button as disabled, add the {{code "pure-button-disabled"}} classname alongside {{code "pure-button"}}.
+        要将按钮标记为禁用，只需在 {{code "pure-button"}} 上再附加 {{code "pure-button-disabled"}} 类名。
     </p>
 
   {{#prefixIds "disabled"}}
@@ -36,9 +36,9 @@
     {{> buttons/disabled}}
   {{/code}}
 
-    <h2 class="content-subhead">Active Buttons</h2>
+    <h2 class="content-subhead">激活按钮</h2>
     <p>
-        To style a button so that it appears "pressed", add the {{code "pure-button-active"}} classname alongside {{code "pure-button"}}.
+        要让按钮显示为『按下』的状态，在 {{code "pure-button"}} 上添加 {{code "pure-button-active"}} 类名。
     </p>
 
   {{#prefixIds "active"}}
@@ -49,9 +49,9 @@
     {{> buttons/active}}
   {{/code}}
 
-    <h2 class="content-subhead">Primary Buttons</h2>
+    <h2 class="content-subhead">主要按钮</h2>
     <p>
-        To indicate that a button represents a primary action, add the {{code "pure-button-primary"}} classname alongside {{code "pure-button"}}.
+        要突出显示一个主要动作的按钮，可以在 {{code "pure-button"}} 上附加 {{code "pure-button-primary"}} 类名。
     </p>
 
   {{#prefixIds "primary"}}
@@ -64,16 +64,16 @@
 
 
 
-    <h2 class="content-subhead">Customizing Buttons</h2>
+    <h2 class="content-subhead">定制按钮样式</h2>
     <p>
-        Thanks to Pure's minimal styling, it is easy to build off of the generic Pure button and create customized buttons for your own application.
+        得益于 Pure 的最小化风格设计，完全抛弃 Pure 的默认样式创造新风格非常简单。
     </p>
 
     <p>
-        To customize button styles, you should group your custom CSS into a class such as {{code "pure-button-foo"}}, which you can then append to an element that already has the {{code "pure-button"}} classname. Here are some examples.
+        要定制按钮样式，只要遵循 {{code "pure-button-foo"}} 这样的命名规则，然后附加到已经有了 {{code "pure-button"}} 类名的元素上即可。例如：
     </p>
 
-    <h3 class="content-subhead">Colored buttons with rounded corners</h3>
+    <h3 class="content-subhead">圆角 + 彩色</h3>
 
   {{#prefixIds "primary"}}
     {{> buttons/colors}}
@@ -84,7 +84,7 @@
   {{/code}}
 
 
-    <h3 class="content-subhead">Buttons with different sizes</h3>
+    <h3 class="content-subhead">不同大小</h3>
 
   {{#prefixIds "primary"}}
     {{> buttons/sizes}}
@@ -95,9 +95,9 @@
   {{/code}}
 
 
-    <h3 class="content-subhead">Buttons with icons</h3>
+    <h3 class="content-subhead">带图标的按钮</h3>
     <p>
-        Pure doesn't ship with icon fonts, but we play nice with existing ones. Incorporating icon fonts with Pure Buttons is easy. In the example below, we're using icon fonts from <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>. Put the <a href="http://fortawesome.github.io/Font-Awesome/get-started/">Font Awesome CSS file</a> on your page and use an {{code "<i>"}} element within a {{code "pure-button"}} element.
+        Pure 自身不包含 icon font，但是它们搭配在一起完全没问题。下面的例子用了 <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>，引入 <a href="http://fortawesome.github.io/Font-Awesome/get-started/">Font Awesome CSS 文件</a> 然后把 {{code "pure-button"}} 添加到 {{code "<i>"}} 元素上，就是这么简单！
     </p>
 
   {{#prefixIds "primary"}}
