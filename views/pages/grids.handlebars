@@ -1,18 +1,18 @@
-{{setTitle     "Responsive Grids"}}
-{{setSubTitle  "A fully customizable responsive grid"}}
+{{setTitle     "响应式栅格"}}
+{{setSubTitle  "可自由定制的响应式栅格系统"}}
 {{setActiveNav "grids"}}
 
 {{> header}}
 
 <div class="content">
 
-    <h2 class="content-subhead">How do Pure Grids work?</h2>
+    <h2 class="content-subhead">Pure 栅格系统原理</h2>
     <p>
-        Pure Grids are very easy to work with. Consider <code>pure-g</code> to be a row or "grid", and {{code "pure-u-*-*"}} to be columns, or "units". Each {{code "pure-g"}} can contain many units. Units have various class names that represent their widths. For example, {{code "pure-u-1-2"}} has a width of 50%, whereas {{code "pure-u-1-5"}} would have a width of 20%.
+        Pure 的栅格系统非常易用。<code>pure-g</code> 表示一行（或一格“grid”），{{code "pure-u-*-*"}} 则是一列（单元，“unit”）。每个 {{code "pure-g"}} 可以包含许多列单元。有各种单元的类可以约束它们的宽度，例如 {{code "pure-u-1-2"}} 的宽度为 50%；而 {{code "pure-u-1-5"}} 的宽度是 20%.
     </p>
 
     <p>
-        The only constraints for Pure Grids are that all "units" are children of a "grid". In other words, if you have an element with a {{code "pure-u-*"}} class name, it needs to be within a parent element with a {{code "pure-g"}} or {{code "pure-g-r"}} class name. Here's an example of a grid with three columns:
+        Pure 栅格系统唯一的局限是所有的『列单元』都必须是一个栅格的子元素，也就是说，一个类名为 {{code "pure-u-*"}} 的单元必须属于一个 {{code "pure-g"}} 或 {{code "pure-g-r"}} 的子元素才能生效。下面是一个三列栅格的示例：
     </p>
 
   {{#code}}
@@ -21,20 +21,20 @@
 
     <aside>
         <p>
-            For a more detailed guide, check out the <a href="http://yuilibrary.com/yui/docs/cssgrids/">CSS Grids documentation</a> on the YUI website.
+            要了解更多的细节说明，请至 YUI 网站查阅 <a href="http://yuilibrary.com/yui/docs/cssgrids/">CSS Grids documentation</a>。
         </p>
     </aside>
 
 
-    <h2 class="content-subhead">How do Pure Responsive Grids work?</h2>
+    <h2 class="content-subhead">Pure 栅格如何实现响应式？</h2>
     <p>
-        Pure Responsive Grids builds on top of the existing grids implementation. It adds a single new class name called {{code "pure-g-r"}} (the "r" stands for responsive, you see). You can use this instead of using {{code "pure-g"}} as you normally do. All elements with a class name of {{code "pure-u-*-*"}} will automatically become responsive if they are direct descendents of a {{code "pure-g-r"}}.
+        Pure 的响应式设计基于栅格系统实现，增加了一个新的类 {{code "pure-g-r"}}（"r" 表示 responsive，响应式）。你可以用这个类替换掉通常使用的 {{code "pure-g"}}，然后所有它的一级子元素 {{code "pure-g-r"}} 都将是响应式的。
     </p>
 
 
-    <h2 class="content-subhead">The HTML</h2>
+    <h2 class="content-subhead">HTML</h2>
     <p>
-        The first snippet below shows how regular Pure Grids are written. These grids are unresponsive. They'll always be one-thirds, irrespective of the width of the screen. The second snippet replaces the {{code "pure-g"}} with {{code "pure-g-r"}}, thereby making the one-third columns collapse to full width on lower screen widths.
+        下面第一段代码是普通 Pure 栅格，没有响应式效果，无论屏幕多宽它都会保持等宽三列。第二段代码将 {{code "pure-g"}} 改为 {{code "pure-g-r"}}，最终这段代码在小屏幕上会将三分之一宽度的列展开为全宽。
     </p>
 
     {{#code}}
@@ -45,28 +45,26 @@
     {{> grids/compare-r}}
     {{/code}}
 
-    <h2 class="content-subhead">Features</h2>
+    <h2 class="content-subhead">功能</h2>
 
     <ul class="content-spaced">
-        <li>Adds configurable media queries for different screen widths (Desktops, Landscape Tablets, Portrait Tablets, Phones)</li>
-        <li>Collapses elements to 100% if smaller than a certain width (767px by default)</li>
-        <li>Adjusts images to fit on smaller screens</li>
-        <li>Works with as many columns as you want (or as few)</li>
-        <li>Supports configurable prefixes</li>
+        <li>针对多种屏幕宽度（桌面、横向平板、竖向平板、手机）的媒体请求</li>
+        <li>小于指定屏幕宽度的时候将列单元扩展为100%宽度（默认是767px）</li>
+        <li>对小屏自动调整图片大小</li>
+        <li>列数量不限</li>
+        <li>支持自定义类前缀</li>
     </ul>
 
 
-    <h2 class="l-centered">See it in action below!</h2>
-    <h3 class="l-centered">Resize the page to see the grid collapse.</h3>
+    <h2 class="l-centered">看看下面的实例！</h2>
+    <h3 class="l-centered">缩放本页面就能看到栅格的展开收起效果。</h3>
 
     {{> grids/four-col}}
 
-    <h2 class="content-subhead">Applying padding and borders to Grid units</h2>
+    <h2 class="content-subhead">给栅格单元添加 border 和 padding</h2>
 
     <p>
-        To add borders and padding to Pure Grids, you have two options.
-        The first option is to nest a {{code "<div>"}} inside each Grid unit
-        and style the child container:
+        有两种方法，第一种是在栅格单元内部嵌套一个 {{code "<div>"}} 然后给它添加样式：
     </p>
 
     {{#code}}
@@ -74,11 +72,7 @@
     {{/code}}
 
     <p>
-        The second option is to add borders and padding directly to a Grid unit.
-        This would ordinarily risk breaking the layout,
-        but you can easily avoid this problem
-        by augmenting the behavior of the Grid itself
-        with a {{code "box-sizing: border-box"}} rule: 
+        另一种是直接给栅格单元添加样式。直接这么做会破坏布局，不过你可以给每个单元格添加一个 {{code "box-sizing: border-box"}} 属性来避免此问题：
     </p>
 
     {{#code}}
@@ -86,25 +80,20 @@
     {{/code}}
 
     <p>
-        Using {{code "box-sizing: border-box"}} keeps your markup cleaner,
-        but has two minor drawbacks. Legacy browsers such as IE7 and below
-        lack support for {{code "box-sizing"}}, and setting this property 
-        on all Grid units makes it harder to override or unset the value later on. 
-        As an unopinionated library, Pure lets {{code "box-sizing"}} remain at the default
-        value of {{code "content-box"}} and leaves the choice up to you.
+        使用 {{code "box-sizing: border-box"}} 可以保持你的代码干净优雅，但是有两个小问题：IE7 及以下的浏览器不支持这个属性，另外给所有的栅格单元都添加这个属性之后会影响后续对其样式进行覆盖或者清除。Pure 尽力不作任何主张，保持了 {{code "box-sizing"}} 的默认值 {{code "content-box"}}，具体怎样使用的决定权由你。
     </p>
 
-    <h2 class="content-subhead">Grids on Mobile</h2>
+    <h2 class="content-subhead">移动设备上的栅格</h2>
     <p>
-        Putting the {{code "pure-g"}} classname on the wrapper instead of {{code "pure-g-r"}} will ensure that grid units will not collapse on small screens. This is a good way to make grids on smaller screens like phones.
+        在父元素上使用 {{code "pure-g"}} 而非 {{code "pure-g-r"}} 可以保证栅格在任意屏幕上都是一致的效果：
     </p>
 
     {{> grids/mobile-col}}
 
 
-      <h2 class="content-subhead">Want to just use Grids?</h2>
+      <h2 class="content-subhead">只想用用栅格系统？</h2>
       <p>
-          Grids is part of the Pure CSS file. However, if you just want Grids and not the other modules, you can pull it down separately. Just include this {{code "<link>"}} element in your {{code "<head>"}}.
+          栅格系统是 Pure CSS 的一部分，不过如果你只想要这个部分的话，也可以拿出来单独引用。在 {{code "<head>"}} 包含这段 {{code "<link>"}} 即可：
       </p>
 
     {{#code}}
@@ -113,7 +102,7 @@
 
       <aside>
           <p>
-              Optionally, you can head over to the <a href="http://yui.github.io/gridbuilder/">Grid Builder</a> to make your very own custom grid. Save the outputted CSS in a file and you're good to go!
+              此外，你可以到 <a href="http://yui.github.io/gridbuilder/">Grid Builder</a> 创建定制化的栅格系统，可以得到一份CSS文件，立等可取！
           </p>
       </aside>
 </div>
