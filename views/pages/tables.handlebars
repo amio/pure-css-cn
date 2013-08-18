@@ -1,14 +1,14 @@
-{{setTitle     "Tables"}}
-{{setSubTitle  "Simple CSS for HTML Tables"}}
+{{setTitle     "表格"}}
+{{setSubTitle  "HTML 表格样式"}}
 {{setActiveNav "tables"}}
 
 {{> header}}
 
 <div class="content">
 
-    <h2 class="content-subhead">Default Table</h2>
+    <h2 class="content-subhead">基础表格</h2>
     <p>
-        To style an HTML table, add the {{code "pure-table"}} classname. This class adds padding and borders to table elements, and emphasizes the header.
+        使用类 {{code "pure-table"}} 可以给表格添加边框和补白，以及标题格子的背景色。
     </p>
 
     {{> tables/default}}
@@ -18,9 +18,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Bordered Table</h2>
+    <h2 class="content-subhead">全框表格</h2>
     <p>
-        To add horizontal and vertical borders to all cells, add the {{code "pure-table-bordered"}} classname to the {{code "<table>"}} element.
+        要给所有单元格都添加边框的话，只需在 {{code "<table>"}} 元素上添加 {{code "pure-table-bordered"}} 类。
     </p>
 
     {{> tables/bordered}}
@@ -30,9 +30,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Table with Horizontal Borders</h2>
+    <h2 class="content-subhead">横线表格</h2>
     <p>
-        If you prefer horizontal lines only, add the {{code "pure-table-horizontal"}} classname to the {{code "<table>"}} element.
+        如果你只想要横向的间隔线，就在 {{code "<table>"}} 元素上添加 {{code "pure-table-horizontal"}} 类。
     </p>
 
     {{> tables/horizontal}}
@@ -42,13 +42,13 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Striped Table</h2>
+    <h2 class="content-subhead">斑马线表格</h2>
     <p>
-        Large tables are easier to parse visually if rows are easily distinguishable. Adding the {{code "pure-table-odd"}} class name to every other {{code "<tr>"}} element changes the background of the row and creates a zebra-styled effect.
+        较大的表格加上斑马线效果的话会易读很多。每隔一个 {{code "<tr>"}} 添加一个 {{code "pure-table-odd"}} 类以改变背景色，即可得到斑马线底纹。
     </p>
 
     <p>
-        <b>Note:</b> In browsers which support the CSS3 <a href="http://caniuse.com/#search=nth-child">{{code "nth-child"}} pseudo selector</a> a simpler approach can be used. The {{code "pure-table-striped"}} classname can be added to the {{code "<table>"}} element and the zebra-styled striping will happen automatically. This approach will <em>not</em> work in Internet Explorer 8 or lower.
+        <b>注意：</b> 在支持 CSS3 <a href="http://caniuse.com/#search=nth-child">{{code "nth-child"}} 选择符</a> 的浏览器上可以用一个更简单的办法，只要在 {{code "<table>"}} 元素上添加 {{code "pure-table-striped"}} 类名即可。这个方法<em>不</em>适用 Internet Explorer 8 及以下版本浏览器。
     </p>
 
     {{> tables/striped}}
