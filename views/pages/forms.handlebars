@@ -1,14 +1,14 @@
-{{setTitle     "Forms"}}
-{{setSubTitle  "Simple CSS for HTML Forms"}}
+{{setTitle     "表单"}}
+{{setSubTitle  "HTML表单样式"}}
 {{setActiveNav "forms"}}
 
 {{> header}}
 
 <div class="content">
 
-    <h2 class="content-subhead">Default Form</h2>
+    <h2 class="content-subhead">默认表单</h2>
     <p>
-        To create a default inline form, add the {{code "pure-form"}} classname to any {{code "<form>"}} element.
+        要创建一个行内表单，只需要给任意 {{code "<form>"}} 添加类名 {{code "pure-form"}} 即可。
     </p>
 
   {{#prefixIds "default"}}
@@ -20,9 +20,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead" id="stacked-form">Stacked Form</h2>
+    <h2 class="content-subhead" id="stacked-form">堆叠表单</h2>
     <p>
-        To create a stacked form with input elements below the labels, add the {{code "pure-form-stacked"}} classname to a {{code "<form>"}} element alongside {{code "pure-form"}}.
+        要创建 input 和 label 各占一行的表单，给任意表单元素添加 {{code "pure-form-stacked"}} 和 {{code "pure-form"}} 两个类名。
     </p>
 
   {{#prefixIds "stacked"}}
@@ -34,9 +34,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Aligned Form</h2>
+    <h2 class="content-subhead">对齐表单</h2>
     <p>
-        To create an aligned form, add the {{code "pure-form-aligned"}} classname to a {{code "<form>"}} element alongside {{code "pure-form"}}. In an aligned form, the labels are right-aligned against the form input controls, but on smaller screens revert to a <a href="#stacked-form">stacked form</a>.
+        要创建一组标签对齐的表单，给任意表单元素添加 {{code "pure-form-aligned"}} 和 {{code "pure-form"}} 类名。这类表单的标签以右对齐方式呈现，在小屏幕上则会变成<a href="#stacked-form">堆叠表单</a>的样式。
     </p>
 
   {{#prefixIds "aligned"}}
@@ -47,9 +47,9 @@
     {{> forms/aligned}}
   {{/code}}
 
-    <h2 class="content-subhead">Multi-Column Form (with Pure Grids)</h2>
+    <h2 class="content-subhead">多列表单（使用了栅格系统）</h2>
     <p>
-        To create multi-column forms, include your form elements within a <a href="{{pages.grids}}">Pure Grid</a>. The following example uses Pure Grids with a stacked form.
+        要创建多列表单，将表单内容包含进 <a href="{{pages.grids}}">Pure 栅格</a>。下面的例子展示了将堆叠表单放进栅格的效果：
     </p>
 
   {{#prefixIds "multi"}}
@@ -60,9 +60,9 @@
     {{> forms/multi}}
   {{/code}}
 
-    <h2 class="content-subhead">Grouped Inputs</h2>
+    <h2 class="content-subhead">输入框分组</h2>
     <p>
-        To group sets of text-based input elements, wrap them in a {{code "<fieldset>"}} element with a {{code "pure-group"}} classname. Grouped inputs work well for sign-up forms and look natural on mobile devices.
+        将文本输入框包含进一个有 {{code "pure-group"}} 类名的 {{code "<fieldset>"}} 元素即可将其分组。分组输入框常用于注册表单，在移动设备上也更接近原生样式。
     </p>
 
   {{#prefixIds "grouped"}}
@@ -74,9 +74,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Input Sizing</h2>
+    <h2 class="content-subhead">输入框大小</h2>
     <p>
-        Input elements have fluid width sizes in a syntax that is similar to <a href="{{pages.home}}">Pure Grids</a>. You can apply a {{code "pure-input-*"}} class to these elements.
+        文本输入框有类似<a href="{{pages.grids}}">栅格系统</a>一样的自由宽度，可以直接应用 {{code "pure-input-*"}} 格式的类名。
     </p>
 
   {{#prefixIds "input-size"}}
@@ -88,7 +88,7 @@
   {{/code}}
 
     <p>
-        You can control input sizing even further by wrapping them in grid containers. In the example below, the {{code "<input>"}} elements have a {{code "pure-input-1"}} class, but are wrapped in a {{code "<div>"}} with a specific grid class.
+        此外你还可以将输入框放进栅格中来控制它的大小。下面的例子中，{{code "<input>"}} 元素的类是 {{code "pure-input-1"}}，但是它包含在一个特定宽度的 {{code "<div>"}} 中。
     </p>
 
   {{#prefixIds "input-grid"}}
@@ -100,9 +100,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Required Inputs</h2>
+    <h2 class="content-subhead">必填项目</h2>
     <p>
-        To mark a form control as required, add the {{code "required"}} attribute.
+        添加 {{code "required"}} 属性可以将表单设置为必填项目。
     </p>
 
   {{#prefixIds "invalid"}}
@@ -114,9 +114,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Disabled Inputs</h2>
+    <h2 class="content-subhead">禁用表单</h2>
     <p>
-        To disable a form control, add the {{code "disabled"}} attribute.
+        添加 {{code "required"}} 属性可以将表单设置为禁用项目。
     </p>
 
   {{#prefixIds "disabled"}}
@@ -128,9 +128,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Read-Only Inputs</h2>
+    <h2 class="content-subhead">只读表单</h2>
     <p>
-        To make a form input read-only, add the {{code "readonly"}} attribute. The difference between {{code "disabled"}} and {{code "readonly"}} is read-only inputs are still focusable. This allows people to interact with the input and select its text, whereas disabled controls are not interactive.
+        添加 {{code "readonly"}} 属性可以将表单设置为只读。{{code "disabled"}} 和 {{code "readonly"}} 的区别是只读表单仍旧可以聚焦，允许用户选择其中的文字，禁用则不行，禁止了一切交互。
     </p>
 
   {{#prefixIds "readonly"}}
@@ -142,9 +142,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Rounded Inputs</h2>
+    <h2 class="content-subhead">圆角输入框</h2>
     <p>
-        To display a form control with rounded corners, add the {{code "pure-input-rounded"}} classname.
+        要让输入框显示为圆角，添加类名 {{code "pure-input-rounded"}} 即可。
     </p>
 
   {{#prefixIds "rounded"}}
@@ -156,9 +156,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Checkboxes and Radios</h2>
+    <h2 class="content-subhead">复选和单选</h2>
     <p>
-        To normalize and align checkboxes and radio inputs, add the {{code "pure-checkbox"}} or {{code "pure-radio"}} classname.
+        要一致化并对齐复选框和单选框的话，给它们添加类名 {{code "pure-checkbox"}} 和 {{code "pure-radio"}}。
     </p>
 
   {{#prefixIds "checkbox-radio"}}
