@@ -1,14 +1,14 @@
-{{setTitle     "Customize 定制"}}
-{{setSubTitle  "Choose the modules that you need"}}
+{{setTitle     "模块定制"}}
+{{setSubTitle  "只选择所需的模块"}}
 {{setActiveNav "customize"}}
 
 {{> header}}
 
 <div class="content">
 
-    <h2 class="content-subhead">Rollups</h2>
+    <h2 class="content-subhead">完整包</h2>
     <p>
-        Rollups consist of all the modules in Pure. There are two rollups available - a regular (responsive) one, and a non-responsive one. Choose that one that's right for your project.
+        囊括了 Pure 中的所有模块，有两种可选，一个是正常包含响应式特性的，一个是不包含响应式特性的。
     </p>
 
     <table class="pure-table pure-table-bordered">
@@ -33,9 +33,9 @@
         </tbody>
     </table>
 
-    <h3>Alternate CDNs</h3>
+    <h3>其他 CDN</h3>
     <p>
-        The main host for Pure is the Yahoo! CDN where Pure is available over HTTP and individual modules can be combined together in a single combo request. The following table lists alternate CDNs where Pure is hosted.
+        Pure 存放于 Yahoo! CDN，以 HTTP 协议提供，可以将任意模块组合成一个单独的请求。下面的清单列出了其他存放 Pure 的CDN网络。
     </p>
 
     <table class="pure-table pure-table-bordered">
@@ -58,13 +58,13 @@
     </table>
     
     <p>
-        <b>Note:</b> If the latest version of Pure is not yet on one of the alternate CDNs, please contact them to update to the latest vesion of Pure: <b>{{pure_version}}</b>.
+        <b>注意：</b> 如果上述 CDN 没有保持同步 Pure 更新，请联系他们更新至 Pure 的最新版：<b>{{pure_version}}</b>。
     </p>
 
 
-    <h2 class="content-subhead">Individual Modules</h2>
+    <h2 class="content-subhead">独立模块</h2>
     <p>
-        You can also pull in the modules individually. The Yahoo! CDN supports combo handling, so you can combo your requests and get a single CSS file back. Here's an example of a combo URL that only includes CSS for <a href="{{pages.base}}">Base</a>, <a href="{{pages.grids}}">Grids</a>, and <a href="{{pages.forms}}">Forms</a>:
+        你也可以单独使用各个模块。Yahoo! CDN 可以把多个文件请求合并为一个单独的CSS文件，像这样使用（只包含<a href="{{pages.base}}">基础样式</a>，<a href="{{pages.grids}}">栅格</a>和<a href="{{pages.forms}}">表单</a>）：
     </p>
 
 {{#code}}
@@ -118,18 +118,18 @@
         </tbody>
     </table>
 
-    <h2 class="content-subhead">Skinning</h2>
+    <h2 class="content-subhead">皮肤</h2>
     <p>
-        Pure comes with a minimalistic style that allows you to customize it with your own CSS. The <a href="https://git.corp.yahoo.com/pages/yui/skinbuilder/">YUI Skin Builder</a> is a great tool to use if you need help developing a theme. With a single click, the Skin Builder is able to generate all the CSS necessary to theme Pure.
+        Pure 的最小化风格允许你定制为任何样式，此外还有个 <a href="https://git.corp.yahoo.com/pages/yui/skinbuilder/">YUI Skin Builder</a> 帮助你快速修改 Pure 的皮肤风格，点几下鼠标，Skin Builder 就可以生成所需的 CSS。
     </p>
 
     <p>
-        <a href="http://yui.github.io/skinbuilder/?mode=pure" class="pure-button">Launch Skin Builder</a>
+        <a href="http://yui.github.io/skinbuilder/?mode=pure" class="pure-button">进入 Skin Builder</a>
     </p>
 
-    <h2 class="content-subhead">Contribute on GitHub</h2>
+    <h2 class="content-subhead">在 GitHub 上贡献代码</h2>
     <p>
-        Pure is an open-source project under the BSD License. We welcome issues, pull requests, and feedback. Check out our <a href="https://github.com/yui/pure">repo on GitHub</a>.
+        Pure 是一个使用 BSD 协议的开源项目，非常欢迎大家提出任何建议、反馈、推送请求，来<a href="https://github.com/yui/pure">Pure 在 GitHub 上的仓库</a>看看吧！
     </p>
 
 </div>

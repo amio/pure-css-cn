@@ -108,8 +108,8 @@ routePage('forms',     '/forms/',     '表单',     routes.render('forms'));
 routePage('buttons',   '/buttons/',   '按钮',   routes.render('buttons'));
 routePage('tables',    '/tables/',    '表格',    routes.render('tables'));
 routePage('menus',     '/menus/',     '菜单',     routes.render('menus'));
-routePage('customize', '/customize/', '模块选择', routes.render('customize'));
-routePage('extend',    '/extend/',    '扩展 Pure',    routes.render('extend'));
+routePage('customize', '/customize/', '模块定制', routes.render('customize'));
+routePage('extend',    '/extend/',    '扩展Pure',    routes.render('extend'));
 routePage('layouts',   '/layouts/',   '布局示例',   routes.render('layouts'));
 
 routePage('layoutsGallery',   '/layouts/gallery/',   routes.render('layouts/gallery', 'blank'));
