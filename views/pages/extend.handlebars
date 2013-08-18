@@ -1,5 +1,5 @@
-{{setTitle     "Extend"}}
-{{setSubTitle  "Build on top of Pure"}}
+{{setTitle     "扩展Pure"}}
+{{setSubTitle  "站在 Pure 的肩膀上"}}
 {{setActiveNav "extend"}}
 
 {{addLocalCSS "/css/bootstrap/modal.css"}}
@@ -9,35 +9,35 @@
 <div class="content">
 
     <p>
-        One of our goals when developing Pure was to make it extremely extensible. By including Pure and writing some CSS on top of it, you can ensure that your site or app works in across browsers, while looking truly unique. Best of all, your CSS file size will remain tiny, which is a great thing for mobile users and others with slow connections.
+    	我们开发 Pure 时的一个重要目标就是易扩展性。引入 Pure 然后在此基础上书写 CSS，你可以轻松得到一个跨浏览器运行的网站或者应用，而界面又是独一无二的。最妙的是，你的 CSS 文件能够保持苗条身材，这对移动用户和较慢的网络连接来说非常重要。
     </p>
 
     <aside>
         <p>
-            Want a quick start? Take a look at some <a href="{{pages.layouts}}">layouts</a> that we've built on top of Pure.
+            想要快速开始？看看我们基于 Pure 创建的一些<a href="{{pages.layouts}}">布局实例</a>吧。
         </p>
     </aside>
 
 
-    <h2 class="content-subhead">Style Guide</h2>
+    <h2 class="content-subhead">风格指导</h2>
 
-    <h3>Based on SMACSS</h3>
+    <h3>基于 SMACSS</h3>
     <p>
-        Pure is broken up into a set of responsive modules. From the beginning, we adopted <a href="http://smacss.com/">SMACSS</a> as a convention for writing our CSS. For those who are new to SMACSS, you should give it a quick read, especially the section on <a href="http://smacss.com/book/type-module">module rules</a>.
+    	Pure 由一系列响应式的模块组成。从一开始我们就将 <a href="http://smacss.com/">SMACSS</a> 作为书写 CSS 的风格指导。不熟悉 SMACSS 的话，可以先从它的文档中 <a href="http://smacss.com/book/type-module">module rules</a> 章节来个入门了解。
     </p>
 
-    <h3>Class Name Conventions</h3>
+    <h3>类命名规范</h3>
     <p>
-        One of the conventions in Pure is for every module to have a standard class name for common rules across a module, and then have additional class names for specific presentational rules for a specific sub-module. All classes start with a {{code "pure-"}} prefix to prevent collisions. In addition, we try not to have presentational class names. Instead of calling something {{code "pure-form-horizontal"}}, we prefer to call it {{code "pure-form-aligned"}}. This prevents a tight coupling between class names and styles, which is good for maintainability.
+    	Pure 中每个模块都有一个标准名，用于贯穿整个模块的通用样式，然后对特定子模块再添加特定的类名后缀。所有的类都以 {{code "pure-"}} 为前缀，避免和其他库的冲突。此外，我们尽力避免表现式的类名，例如采用 {{code "pure-form-aligned"}} 而非 {{code "pure-form-horizontal"}} 来称呼对齐的表单，这能够避免类名和样式之间的耦合度，有利于代码的可维护性。
     </p>
 
     <p>
-        For example, let's consider the HTML and CSS for a <a href="{{pages.forms}}">Stacked Form</a>:
+        举例说明，考虑 <a href="{{pages.forms}}">堆叠表单</a>中的这段 HTML 和 CSS：
     </p>
 
-    <h4>Stacked Form: HTML</h4>
+    <h4>堆叠表单：HTML</h4>
     <p>
-        A stacked form is created by adding two class names, {{code "pure-form"}} and {{code "pure-form-stacked"}}.
+        堆叠表单由两个类生成，{{code "pure-form"}} 和 {{code "pure-form-stacked"}}。
     </p>
 
 {{#code}}
@@ -46,9 +46,9 @@
 </form>
 {{/code}}
 
-    <h4>Stacked Form: CSS</h4>
+    <h4>堆叠表单：CSS</h4>
     <p>
-        The two class names serve different purposes. One is used as a general selector to group common rules for all forms, while the other defines specific rules for a stacked form.
+    	这两个类提供不同的功能，一个是通用选择符，用于所有的表单，而另一个则指定了堆叠表单的专属样式。
     </p>
 
 {{#code "css"}}
@@ -68,9 +68,9 @@ for the stacked effect.
 {{/code}}
 
 
-    <h2 class="content-subhead">Extending Pure</h2>
+    <h2 class="content-subhead">扩展 Pure</h2>
     <p>
-        When you're extending Pure, we recommend that you follow this convention. For instance, if you wanted to create a new type of form, your HTML and CSS should look something like this:
+    	当扩展 Pure 的时候，我们建议您遵循上述原则，例如创建一个新的表单类型：
     </p>
 
 {{#code}}
@@ -85,61 +85,61 @@ for the stacked effect.
 {{/code}}
 
     <p>
-        One common task that you may wish to do is to style buttons so they look different. The <a href="{{pages.buttons}}">Pure Button Documentation</a> has some examples on how you can create buttons with custom sizes and styles by adopting this modular architecture.
+    	比较常见的情况是你会要自行定制按钮的样式，<a href="{{pages.buttons}}">Pure 按钮文档</a> 有一些例子，展示了如何依此规则定制新的按钮样式。
     </p>
 
-    <h2 class="content-subhead">Using the Skin Builder</h2>
+    <h2 class="content-subhead">使用 Skin Builder</h2>
 
     <p>
-        The <a href="http://yui.github.io/skinbuilder/?mode=pure">Skin Builder</a> is a great way to customize the look and feel of Pure without writing any CSS. Just select a single color, and watch Skin Builder work its magic to skin all of Pure's components. You can copy and paste the generated CSS into a stylesheet and get started quickly.
+        <a href="http://yui.github.io/skinbuilder/?mode=pure">Skin Builder</a> 是一个超便捷的 Pure  界面风格定制工具，无需写任何 CSS 代码，只要选择一个颜色，Skin Builder 会魔术般匹配所有相应的 Pure 组件。将生成的 CSS 拷贝进样式表即可使用。
     </p>
 
     <p>
-        <a class="pure-button" href="http://yui.github.io/skinbuilder/?mode=pure">Launch Skin Builder</a>
+        <a class="pure-button" href="http://yui.github.io/skinbuilder/?mode=pure">打开 Skin Builder</a>
     </p>
 
 
-    <h2 class="content-subhead">Built on Pure</h2>
+    <h2 class="content-subhead">基于 Pure</h2>
 
     <p>
-        The following third-party modules are built on Pure.
+        下面列出了一些基于 Pure 的第三方组件。
     </p>
 
     <dl>
         <dt><a href="http://tilomitra.github.io/csstypography/">Typography</a></dt>
-        <dd>Simple styling for web typography</dd>
+        <dd>精简的 Web 文本排版样式</dd>
 
         <dt><a href="http://tilomitra.github.io/cssextras/">Extras</a></dt>
-        <dd>Simple styling for images, thumbnails, badges, contextual menus and alerts</dd>
+        <dd>用于图片、缩略图、徽章、上下文菜单、警告信息等的基础样式</dd>
     </dl>
 
 
     <h2 class="content-subhead">Pure + Bootstrap + JavaScript</h2>
 
     <p>
-        Pure plays well with other libraries, including Bootstrap and jQuery. As a developer, you can pull in Pure as a foundational CSS framework, and then include specific Bootstrap or jQuery modules that your application may require. There are several benefits to doing this:
+    	Pure 可以和其他的界面库完美协作，包括 Bootstrap 和 jQuery。你可以将 Pure 作为 CSS 框架基础，然后引入所需的特定 Bootstrap 或 jQuery 模块，这样做有多个好处：
     </p>
 
     <ul>
         <li>
             <p>
-                Your website or webapp's CSS will be a lot smaller &mdash; up to <em>5X smaller</em> in some cases!
+                你的 CSS 文件将会非常精简——最多会有五倍的差距！
             </p>
         </li>
         <li>
             <p>
-                You get Pure's minimalist look that's easy to build on top of. No need to overwrite styles!
+                你可以基于 Pure 精简的样式创造内容——无需重写覆盖！
             </p>
         </li>
         <li>
             <p>
-                You can take advantage of Bootstrap's ecosystem without pulling in a monolithic Bootstrap CSS file.
+                你能够利用 Bootstrap 完善的生态系统而无需引用一整个 Bootstrap CSS 文件。
             </p>
         </li>
     </ul>
 
     <p>
-        For example, here's a Bootstrap Modal. It's created by including the Pure CSS Rollup, and just adding Bootstrap's <a href="/css/bootstrap/modal.css">{{code "modal.css"}}</a> along with the jQuery plugin.
+    	如下是一个 Bootstrap 的弹出对话框，使用 Pure CSS 加上 Bootstrap 的 <a href="/css/bootstrap/modal.css">{{code "modal.css"}}</a> 以及 jQuery 插件实现。
     </p>
 
     {{> extend/modal}}
