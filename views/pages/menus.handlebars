@@ -1,5 +1,5 @@
-{{setTitle     "Menus"}}
-{{setSubTitle  "Simple CSS for Menus"}}
+{{setTitle     "菜单"}}
+{{setSubTitle  "菜单样式"}}
 {{setActiveNav "menus"}}
 
 {{addLocalCSS "/css/menus.css"}}
@@ -16,9 +16,9 @@
 
 <div class="content">
 
-    <h2 class="content-subhead">Horizontal Menu</h2>
+    <h2 class="content-subhead">水平菜单</h2>
     <p>
-        To create a horizontal menu, add the {{code "pure-menu-horizontal"}} class name. You can mark the active list element by adding the {{code "pure-menu-selected"}} class to the list element.
+        使用 {{code "pure-menu-horizontal"}} 类名创建一个水平菜单，在菜单项目上添加 {{code "pure-menu-selected"}} 可以标记当前菜单为选中高亮状态。
     </p>
 
     {{> menus/horizontal}}
@@ -28,9 +28,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Menu with Headings</h2>
+    <h2 class="content-subhead">菜单标题</h2>
     <p>
-        To add headings to your menu, place some content outside the {{code "<ul>"}} element and wrap it in an {{code "<a>"}} element with the {{code "pure-menu-heading"}} class name.
+        要给菜单增加一个大标题，只要将内容放在 {{code "<ul>"}} 元素外，用 一个带有 {{code "pure-menu-heading"}} 类的 {{code "<a>"}} 包含即可。
     </p>
 
     {{> menus/heading}}
@@ -40,9 +40,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Vertical Menu</h2>
+    <h2 class="content-subhead">垂直菜单</h2>
     <p>
-        Menus are vertical by default. You need only add the {{code "pure-menu"}} class to style the menu, and the {{code "pure-menu-open"}} class to ensure that it is visible.
+        菜单默认是垂直样式的，你只需添加 {{code "pure-menu"}} 类，以及 {{code "pure-menu-open"}} 来确保菜单显示出来。
     </p>
 
     {{> menus/vertical}}
@@ -52,9 +52,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Add Dropdowns to Menus</h2>
+    <h2 class="content-subhead">下拉菜单</h2>
     <p>
-        Adding dropdowns to menus requires the use of JavaScript. For example, YUI's {{code "Y.Menu"}} module adds dropdown functionality and the ability to create JavaScript menus.
+        下拉菜单需要用到 JavaScript，如 YUI 的 {{code "Y.Menu"}} 模块就很方便。
     </p>
 
     {{> menus/dropdown}}
@@ -64,9 +64,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Menus with Disabled Items</h2>
+    <h2 class="content-subhead">菜单中的禁用项目</h2>
     <p>
-        To mark a link as disabled, add an {{code "<a>"}} element with the {{code "pure-menu-disabled"}} class name. Disabled items appear faded and do not inherit hover styles.
+        要将一个菜单项标记为禁用，增加一个带有 {{code "pure-menu-disabled"}} 类的 {{code "<a>"}} 元素即可。禁用的菜单项颜色稍暗淡，也没有鼠标指向的高亮效果。
     </p>
 
     {{> menus/disabled}}
@@ -76,9 +76,9 @@
   {{/code}}
 
 
-    <h2 class="content-subhead">Paginators</h2>
+    <h2 class="content-subhead">分页</h2>
     <p>
-        To create a paginator control, add the {{code "pure-paginator"}} classname to a {{code "<ul>"}} element. For paginator controls that look like buttons, add the {{code "pure-button"}} class name. For a plainer paginator, you can omit this class.
+        在 {{code "<ul>"}} 上添加 {{code "pure-paginator"}} 类可以创建一个分页栏。要让分页链接看上去是按钮样式的话，就再添加一个 {{code "pure-button"}} 类名。
     </p>
 
     {{> menus/paginator}}
